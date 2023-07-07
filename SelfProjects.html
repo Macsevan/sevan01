@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sevan Kumar |Projects</title>
+    <link rel="stylesheet" href="css/selfProjects.css" />
+  </head>
+  <body>
+    <main>
+    <!-- <button type="button"><a href="index.html" target="_blank">Back</a></button> -->
+      <h1>Documentation of the Project [DIY Coursework Project ]</h1>
+      <hr>
+
+
+      <section>
+        <h2>Objective- To Create an automated Water Pumping system using an ultrasonic sensor</h2>
+        <p>(software and Hardware)</p>
+        <a href="index.html" target="_blank" rel="noopener noreferrer"
+        ><input type="button" value="Back"
+      /></a>
+      </section>
+      <hr>
+
+
+
+      <section>
+        <p>
+          Skills Required(software)
+          <ul>
+            <li>Good Knowledge of C language and Arduino sketch to write code</li>
+            <li>Familiar with Tinker Cad workspace</li>
+            <li>Knowledge of Circuits and components</li>
+            <li>Familiar with Arduino IDE</li>
+            <li>Familiar with MS Office for documentation work</li>
+            <li>HTML and CSS, Git to create UI</li>
+          </ul>
+          <br>
+          Materials Required(Hardware)
+          <ul>
+            <li> PC required</li>
+            <li> A bucket for prototyping as a tank</li>
+            <li> Arduino Nano R3 Atmega328 (Pin Soldered)-Rs375.25</li>
+            <li> R365 6-12V DC Diaphragm-based water pump-Rs141.55</li>
+            <li> 12V 2 Amp power supply board 220V AC to 12V DC-Rs99.75</li>
+            <li> LM2596 DC-DC buck converter adjustable step-down module-Rs56.05</li>
+            <li> RGB LED Common Cathode 4 Pin (5mm)-Rs9.97</li>
+            <li> Breadboard 830 points for solderless prototyping-Rs65.55</li>
+            <li> 1 Channel 5V relay module-Rs46.55</li>
+            <li> Ultrasonic sensor module HCSR04-Rs66.50</li>
+            <li>	Jumper wire (male to male)-Rs52.26</li>
+            <li>	Jumper wire (male to female)-Rs52.25</li>
+            <li>	Total-Rs1025.68</li>
+          </ul>
+        </p>
+      </section>
+      <hr>
+
+
+
+      <section>
+      Pictorial representation of the circuit
+      <br>
+      <img src="Image/Pictorial_circuit diagram.png" alt="Circuit diagram" width="800px">
+      <hr>
+      <h2>How does it work?</h2>
+      <ul>
+        <li>Whole system works on two independent modes, MODE 1: Default Mode and MODE 2: Custom Mode </li>
+        <li><img src="Image/FlowChart.png" alt="FlowChart" width="800px"></li>
+        <li>Default Mode- In this method, the pump would turn on automatically if the bucket(tank) water level falls under 2% of the tank's total capacity, i.e., roughly when the tank is empty. </li>
+        <li><img src="Image/Default Mode 1.png" alt="Default Mode" width="800px"></li>
+        <li>Custom Mode- In this mode, the user would be prompted to enter the minimum water level in the tank, after which they want to turn on the pump. For example, suppose the jar(tank) height is 30cm, and the user does not want the water level to fall under 10cm. In that case, the user would input 10 in the prompt, and accordingly, the Custom lower threshold mode would get activated.</li>
+        <li><img src="Image/Custom Mode.png" alt="Custom Mode" width="800px"></li>
+        <li>Also, irrespective of the mode in which the setup is configured, the pump would turn off when the jar(tank) gets filled.</li>
+      </ul>
+      </section>
+      <hr>
+
+
+
+      <section>
+      <p> <strong>Source Code</strong></p>
+      <br>
+      <img src="Image/source code 01.png" alt="source code 01" width="800px">
+      <img src="Image/source code 02.png" alt="source code 02" width="800px">
+      <img src="Image/source code 3.png" alt="source code 03" width="800px">
+      <img src="Image/source code 04.png" alt="source code 04" width="800px">
+      <img src="Image/source code 05.png" alt="source code 05" width="800px">
+      <img src="Image/source code 06.png" alt="source code 06" width="800px">
+      <img src="Image/source code 07.png" alt="source code 07" width="800px">
+      <br>
+      <p>This Code is an Arduino sketch written in the C programming language. It controls a water level monitoring system using an ultrasonic sensor and an RGB LED. 
+        Here's a breakdown of the code:
+        <ol type="1">
+          <li><strong>Libraries and Definitions:</strong> The necessary libraries are included, and some constants and pin assignments are defined.</li>
+          <li>Variable Declarations: Various variables are declared, including the jar height, empty percentage, and timing variables.</li>
+          <li><strong>Setup Function:</strong> The setup function is executed once the Arduino board starts. It initializes the serial communication, sets pin modes, and prompts the user to enter the jar's height. It also sets the initial state of the pump and displays the initial water level percentage.</li>
+          <li><strong>Loop Function:</strong> After the setup function, the loop function is repeated. It continuously checks for serial input from the user and performs different actions based on the received commands. It also monitors the water level using the ultrasonic sensor and adjusts the pump, and RGB LED accordingly.</li>
+          <li><strong>Helper Functions:</strong> Several helper functions are defined, such as tell_percent (calculates the water level percentage based on the distance measured by the ultrasonic sensor), check_empty (checks if the water level is below the empty threshold), ask_mode (prompts the user to select a mode: default or custom), set_colour (sets the color of the RGB LED based on the water level percentage), display_percent (displays the water level percentage at regular intervals), and display_mode (displays the current mode and its specifications).</li>
+        </ol>
+        <br>
+        Overall, this code allows the user to monitor the water level in a jar or tank and control a pump based on the specified water level thresholds. It also provides visual feedback using an RGB LED.
+        </p>
+        <br>
+        <h3>Code Successfully Compiled.</h3>
+        <img src="Image/Code_Succesfully_Compiled.png" alt="Code Successfully Compiled" width="800px">
+      </section>
+    <hr>
+
+
+
+      <section>
+        • The demonstration Video is uploaded to my YouTube channel, the link is given below
+        <a href="http://youtu.be/mKIhhQ91MRQ" target="_blank" rel="noopener noreferrer">Demonstration Video</a> and the video can played here too
+        <br>
+        <br>
+        <iframe height="400px" width="800px"
+         src="https://www.youtube.com/embed/mKIhhQ91MRQ" 
+         title="YouTube video player" 
+         frameborder="0" 
+         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+         allowfullscreen
+         ></iframe>
+         <br>
+         <br>
+        </section>
+        <hr>
+
+
+
+        <section>
+        • Some Glimpse of the video demonstration is attached below 
+        <br>
+        <br>
+        <br>
+        <img src="Image/yt0001.png" alt="image0001" width="400px">
+        <img src="Image/yt0002.png" alt="image0002" width="400px">
+        <img src="Image/yt0003.png" alt="image0003" width="400px">
+        <img src="Image/yt0004.png" alt="image0004" width="400px">
+        <img src="Image/yt0005.png" alt="image0005" width="400px">
+        <img src="Image/yt0006.png" alt="image0006" width="400px">
+        <br>
+      </section>
+    </main>
+
+
+
+
+
+
+
+
+
+
+    <footer>
+      <a href="FAQ.html" target="_blank">FAQ</a>
+      <a href="ContactUs.html" target="_blank">Contact Us</a>
+      <a href="TermsOfUse.html" target="_blank">Terms Of Use</a>
+      <a href="RefundPolicy.html" target="_blank">Refund Policy</a>
+      <a href="index.html" target="_blank">&copy; 2023 | Home | Sevan Kumar </a>
+    </footer>
+
+
+  </body>
+</html>
